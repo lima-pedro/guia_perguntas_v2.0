@@ -1,0 +1,34 @@
+<%- include ('partials/header.ejs') %>
+
+<body>
+  <div class="container">
+  
+    <%- include ('partials/navbar.ejs') %>
+    
+    <main>
+      <h1>Editar pergunta</h1>
+      <form method="POST" action="/questions/edit/<%= question.id %>">
+        
+        <label>Título</label>
+        <input
+          type="text"
+          placeholder="Título da pergunta"
+          name="title"
+          value="<%= question.title %>"
+        />
+        
+        <label>Descrição</label>
+        <textarea 
+          placeholder="Descreva sua pergunta aqui"
+          name="description"
+        ><%= question.description %></textarea>
+        
+        <button class="btn btn-edit">Editar</button>
+      </form>
+    </main>
+
+    <!-- <%- include ('partials/footer.ejs') %> -->
+  </div>
+</body>
+
+<%- include ('partials/end_html.ejs') %>

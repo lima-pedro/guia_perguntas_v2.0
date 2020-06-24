@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  background-color: #7159c1;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-rows: 10vh 80vh 10vh;
+  grid-template-areas: 'header header header' '. main .' 'footer footer footer'; 
+}
+
+.container header {
+  background-color: #fff;
+  grid-area: header;
+  border-bottom: 4px solid #5131b9;
+  /* height: 50px; */
+
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.container header img {
+  background-color: #7159c1;
+  border-radius: 6px;
+  padding: 4px;
+}
+
+.container header nav ul {
+  display: flex;
+  list-style: none;
+}
+
+.container header nav ul li a {
+  text-decoration: none;
+  margin-right: 34px;
+  color: #7159c1;
+  font-size: 18px;
+  font-weight: normal
+}
+
+.container header nav ul li .btn {
+  max-width: 90px;
+  max-height: 30px;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+}
+
+.container header nav ul li .btn:hover {
+  border: 1px solid #5131b9;
+  font-size: 17px;
+}
+
+.container header nav ul li a:hover {
+  text-decoration: underline;
+}
+
+.container main {
+  background-color: rgb(158, 155, 155);
+  grid-area: main;
+  margin: 40px 20px;
+  border-radius: 7px;
+  height: 100%;
+}
+
+.container main h1 {
+  color: #fff;
+  font-size: 36px;
+  line-height: 46px;
+  text-align: center;
+}
+
+.container main form {
+  display: flex;
+  flex-direction: column;
+  padding: 0 8px;
+}
+
+.container main form label,
+.container main form input,
+.container main form textarea,
+.container .btn {
+  margin: 4px;
+}
+
+.container main form label {
+  font-size: 22px;
+  line-height: 32px;
+  font-style: 500;
+  color: #fff
+}
+
+.container main form input,
+.container main form textarea {
+  font-family: 'Roboto', sans-serif;
+  padding: 6px 6px;
+  font-size: 18px;
+  border-radius: 6px;
+  border: 0;
+  color: #252525
+}
+
+.container main form textarea {
+  height: 150px
+}
+
+.container .btn {
+  border: 0;
+  width: 200px;
+  height: 50px;
+  align-self: center;
+  border-radius: 6px;
+  margin: 8px;
+  background: #7159c1;
+  cursor: pointer;
+
+  font-size: 20px;
+  line-height: 30px; 
+  color: #fff
+}
+
+.container .btn.btn-edit:hover {
+  background-color: yellow;
+  color: black;
+  transition: 0.7s
+}
+
+.container .btn.btn-create:hover {
+  background-color: green;
+  color: #fff;
+  transition: 0.7s
+}
+
+.container .btn.btn-answer:hover {
+  background-color: rgb(40, 158, 194);
+  color: #fff;
+  transition: 0.7s
+}
+
+.container .btn:hover {
+  background-color: #fff;
+  color: #7159c1;
+  transition: 0.7s;
+}
+
+.container footer {
+  grid-area: footer;
+  background-color: #fff;
+  text-align: center;
+  border-top: 4px solid #5131b9;
+}
+
+.container footer p,
+.container footer p a {
+  font-size: 20px;
+  line-height: 30px;
+  color: #7159c1;
+  text-decoration: none
+}
+
+.container footer p a:hover {
+  text-decoration: underline
+}
+
+/* ====== HOME ====== */
+.container table {
+  grid-area: main;
+  background-color: rgb(158, 155, 155);
+  padding: 5px;
+  border-radius: 6px;
+  color: white;
+  margin: 10px; 
+}
+
+.container table thead tr th {
+  text-align: left;
+  color: #5131b9
+}
+
+.container table tr td{
+  padding: 4px;
+}
+
+.container table tbody tr td button {
+  width: 100px;
+  height: 30px;
+  margin-top: 3px;
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.container table tbody tr td a {
+  color: black;
+  text-decoration: none;
+}
+
+.container table tbody tr td #edit:hover{
+  background-color: yellow;
+  transition: 0.6s;
+}
+
+.container table tbody tr td #delete:hover{
+  background-color: red;
+  transition: 0.6s
+}
+
+.container table tbody tr td #answer:hover{
+  background-color: rgb(40, 158, 194);
+  transition: 0.6s
+}
+
+/* ====== ANSWER ====== */
+.container main form .card {
+  background-color: gray;
+  padding: 2px;
+  border-radius: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.144);
+  margin-bottom: 5px;
+
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.container main form .card .card-title label{
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.container main form .card .card-body {
+  padding: 4px;
+  background-color: rgb(206, 206, 206);
+  font-size: 16px;
+  line-height: 26px;
+}

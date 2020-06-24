@@ -1,0 +1,55 @@
+<%- include ('partials/header.ejs') %>
+
+<body>
+  <div class="container">
+    
+    <%- include ('partials/navbar.ejs') %>
+  
+    <table>
+      <thead>
+        <tr>
+          <th>Título da pergunta</th>
+          <th>Descrição da pergunta</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      
+      <tbody>
+
+        <% if (erro) { %>
+          <p>Houve um erro, tente novamente!</p>
+        <% } %>
+        
+        <% questions.forEach(question => { %>
+          <tr>
+            <td> <%= question.title %> </td>
+            <td> <%= question.description %> </td>
+            <td>
+              
+              <a href="/editquestion/<%= question.id %>">
+                <button id="edit">EDITAR</button>
+              </a>
+
+              
+              <a href="/questions/delete/<%= question.id%>">
+                <button id="delete">APAGAR</button>
+              </a>
+            
+             
+              <a href="/answer/<%= question.id %>">
+                <button id="answer">RESPONDER</button>
+              </a>
+            
+            </td>   
+          </tr>  
+          <% }) %>
+          
+        </tbody>
+      </table>
+      
+      <%- include ('partials/footer.ejs')%>
+    </div>
+    
+  </body>
+  
+  <%- include ('partials/end_html.ejs')%>
